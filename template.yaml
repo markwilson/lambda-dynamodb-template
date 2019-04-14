@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Environment:
+      Variables:
+        ENDPOINT_OVERRIDE:
+
+Resources:
+  MyCommandFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: cmd/my-command/my-command
+      Runtime: go1.x
+      Environment:
+        Variables:
+          TABLE_NAME: "MyTable"

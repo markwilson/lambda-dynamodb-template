@@ -1,0 +1,19 @@
+{
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "ID",
+      "AttributeType": "S"
+    }
+  ],
+  "TableName": "MyTable",
+  "KeySchema": [
+    {
+      "AttributeName": "ID",
+      "KeyType": "HASH"
+    }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 1,
+    "WriteCapacityUnits": 1
+  }
+}
